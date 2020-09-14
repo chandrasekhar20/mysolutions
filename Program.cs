@@ -1,32 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace variablestypes
+namespace overloadProject
 {
     class Program
     {
-        int x;
-        const float pi = 3.14f;
-        readonly bool flag;
-        public Program(int x,bool flag)
+        public void test()
         {
-            this.x = x;
-            this.flag = flag;
+            Console.WriteLine("first method");
+        }
+        public void test(int i)
+        {
+            Console.WriteLine("second method");
+        }
+        public void test(string s)
+        {
+            Console.WriteLine("third method");
+        }
+        public void test(int i,string s)
+        {
+            Console.WriteLine("foruth method");
+        }
+        public void test(string s,int i)
+        {
+            Console.WriteLine("fifth method");
         }
         static void Main(string[] args)
         {
-            int y = 200;
-            Program p1 = new Program(10,true);
-            Program p2 = new Program(20,false);
-            Console.WriteLine(p1.x+"  "+p2.x);
-            Console.WriteLine(p1.flag + "   " + p2.flag);
-            p1.x = 200;
-            Console.WriteLine(y);
-            Console.WriteLine(pi);
+            Program p = new Program();
+            p.test();
+            p.test(2);
+            p.test("chandu");
+            p.test(5,"chandu");
+            p.test("chandu",5);
             Console.ReadLine();
         }
     }
