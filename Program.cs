@@ -4,39 +4,94 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace overloadProject
+namespace AbstractClassDemo
 {
+     /*class University
+    {
+        public virtual void Method1() { }
+        public virtual void Method2() { }
+
+        public void Method3()
+        {
+
+        }
+        
+    }
+
+   abstract  class MyClass : University
+    {
+
+        abstract public  void Method4();
+        public override  void Method1()
+        {
+            
+        }
+
+        public override  void Method2()
+        {
+            
+        }
+
+
+    }
+
     class Program
     {
-        public void test()
-        {
-            Console.WriteLine("first method");
-        }
-        public void test(int i)
-        {
-            Console.WriteLine("second method");
-        }
-        public void test(string s)
-        {
-            Console.WriteLine("third method");
-        }
-        public void test(int i,string s)
-        {
-            Console.WriteLine("foruth method");
-        }
-        public void test(string s,int i)
-        {
-            Console.WriteLine("fifth method");
-        }
         static void Main(string[] args)
         {
-            Program p = new Program();
-            p.test();
-            p.test(2);
-            p.test("chandu");
-            p.test(5,"chandu");
-            p.test("chandu",5);
-            Console.ReadLine();
+            University u = new University();
+            MyClass my = new MyClass();
+        }
+    }*/
+     class One
+    {
+       public void OneMethod()
+        {
+
+        }
+
+        void AnimalSound()
+        {
+
+        }
+    }
+
+    class Two
+    {
+        public void OneMethod()
+        {
+
+        }
+    }
+    interface IAnimal
+    {
+               
+          void AnimalSound();
+                
+    }
+
+    interface IAnimalProperties
+    {
+        void AnimalMovement();
+    }
+
+    class Dog : One,IAnimal   
+    {
+        public void AnimalSound()
+        {
+          // dog barking sound   
+        }
+
+       public  void AnimalMovement()
+        {
+
+        }
+    }
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            
         }
     }
 }
